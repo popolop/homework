@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-02-26T21:17:31.605757" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTestcases" source="/home/ags-ubuntu/work/homework/testcases/LoginTestcases.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-26T21:17:31.770762" level="INFO">Opening browser 'chrome' to base url 'https://n8n-ags.agilesoftgroup.com/signin'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-26T21:17:31.770390" elapsed="2.475548"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to login success with valid credential" line="12">
+<kw name="When user login to n8n with username and password" owner="LoginPageKeywords" source_name="user login to n8n with ${username} and ${password}">
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-26T21:17:34.250227" level="INFO">Typing text 'username' into text field 'name=email'.</msg>
+<msg time="2025-02-26T21:17:34.415092" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-26T21:17:34.415421" level="FAIL">Element with locator 'name=email' not found.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-26T21:17:34.249491" elapsed="0.168155">Element with locator 'name=email' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-26T21:17:36.419051" level="INFO">Typing text 'username' into text field 'name=email'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.418295" elapsed="0.160844"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-26T21:17:34.248995" elapsed="2.330290"/>
+</kw>
+<arg>name=email</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-02-26T21:17:34.248194" elapsed="2.331224"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-26T21:17:36.581147" level="INFO">Typing text 'password' into text field 'name=password'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.580785" elapsed="0.124686"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.580428" elapsed="0.125274"/>
+</kw>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-02-26T21:17:36.579758" elapsed="0.126191"/>
+</kw>
+<kw name="Wait until element is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-26T21:17:36.708348" level="INFO">Clicking element 'xpath=/html/body/div/div/div[1]/div[3]/div/div/div/div[2]/div/div[3]/button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.707718" elapsed="0.099518"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.707166" elapsed="0.100350"/>
+</kw>
+<arg>xpath=/html/body/div/div/div[1]/div[3]/div/div/div/div[2]/div/div[3]/button</arg>
+<status status="PASS" start="2025-02-26T21:17:36.706402" elapsed="0.101403"/>
+</kw>
+<status status="PASS" start="2025-02-26T21:17:34.247464" elapsed="2.560624"/>
+</kw>
+<status status="PASS" start="2025-02-26T21:17:34.246335" elapsed="2.562331"/>
+</test>
+<test id="s1-t2" name="As a user, I fail to login with invalid credential" line="16">
+<kw name="When user login to n8n with username and invalid_password" owner="LoginPageKeywords" source_name="user login to n8n with ${username} and ${password}">
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-26T21:17:36.815223" level="INFO">Typing text 'username' into text field 'name=email'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.814338" elapsed="0.114904"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.813422" elapsed="0.115967"/>
+</kw>
+<arg>name=email</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2025-02-26T21:17:36.812295" elapsed="0.117232"/>
+</kw>
+<kw name="Wait until element is ready then input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-26T21:17:36.930721" level="INFO">Typing text 'invalid_password' into text field 'name=password'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.930467" elapsed="0.128297"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-26T21:17:36.930233" elapsed="0.128686"/>
+</kw>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-02-26T21:17:36.929809" elapsed="0.129211"/>
+</kw>
+<kw name="Wait until element is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-26T21:17:37.060169" level="INFO">Clicking element 'xpath=/html/body/div/div/div[1]/div[3]/div/div/div/div[2]/div/div[3]/button'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-26T21:17:37.059935" elapsed="0.078508"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-26T21:17:37.059638" elapsed="0.079048"/>
+</kw>
+<arg>xpath=/html/body/div/div/div[1]/div[3]/div/div/div/div[2]/div/div[3]/button</arg>
+<status status="PASS" start="2025-02-26T21:17:37.059266" elapsed="0.079589"/>
+</kw>
+<status status="PASS" start="2025-02-26T21:17:36.811140" elapsed="0.327897"/>
+</kw>
+<status status="PASS" start="2025-02-26T21:17:36.809657" elapsed="0.329674"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-26T21:17:37.140385" elapsed="0.113625"/>
+</kw>
+<status status="PASS" start="2025-02-26T21:17:31.606960" elapsed="5.647215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTestcases" id="s1" pass="2" fail="0" skip="0">LoginTestcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
